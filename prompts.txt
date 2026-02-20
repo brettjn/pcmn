@@ -1,0 +1,30 @@
+Lets create a clone of the arcade video game classic Pacman.  Lets use the cursor movement arrow keys instead of a joystick for control. Lets create a .venv python evnironment and load the library pygame to utilize for building the game. The python game file will be named pcmn.py
+
+
+
+Problem:
+
+I ran into this error after playing the game for maybe 20 seconds.
+
+python3 pcmn.py 
+pygame 2.6.1 (SDL 2.28.4, Python 3.12.3)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Traceback (most recent call last):
+  File "/home/blizz/proj/pcmn/pcmn/pcmn.py", line 431, in <module>
+    main()
+  File "/home/blizz/proj/pcmn/pcmn/pcmn.py", line 427, in main
+    game.run()
+  File "/home/blizz/proj/pcmn/pcmn/pcmn.py", line 418, in run
+    self.update()
+  File "/home/blizz/proj/pcmn/pcmn/pcmn.py", line 345, in update
+    ghost.update(self.maze, self.pacman.x, self.pacman.y)
+  File "/home/blizz/proj/pcmn/pcmn/pcmn.py", line 184, in update
+    self.choose_direction(maze, pacman_x, pacman_y)
+  File "/home/blizz/proj/pcmn/pcmn/pcmn.py", line 218, in choose_direction
+    distances.sort()
+TypeError: '<' not supported between instances of 'Direction' and 'Direction'
+
+
+The game ends saying I one when there are still 4 dots left on the playing field.
+
+(Note there are some movement issues where it gets stuck, but leave that for possible future fix, this is just a demonstration of AI code generation capabilities.)
